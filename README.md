@@ -49,3 +49,72 @@ Output: Claim
 Input:
 "I think that movie was amazing!"
 Output: Not a Claim
+
+
+
+
+🔥 Viral Video/Post Reach Prediction
+This project predicts whether a YouTube video (from the DEvideos dataset) will have high reach (viral) or low reach based on features like likes, dislikes, comment count, etc.
+
+📌 Project Overview
+✅ Objective: Predict the virality of a video based on user interactions (likes, dislikes, comment count)
+
+📊 Dataset: DEvideos.csv (from the YouTube Trending Video Dataset)
+
+🤖 Models Used:
+
+Logistic Regression
+
+Random Forest Classifier
+
+📈 Evaluation: Confusion Matrix with Heatmap, Accuracy, Precision, Recall, F1 Score
+
+⚙️ Features Used
+likes
+
+dislikes
+
+comment_count
+
+views (used to define virality threshold)
+
+🧠 Target Variable
+is_viral: Binary label derived from whether views are greater than the 75th percentile (1 = Viral, 0 = Not Viral)
+
+🏗️ How It Works
+Preprocess the dataset
+
+Remove missing values
+
+Select relevant columns
+
+Create is_viral label
+
+Train-Test Split
+
+80% training, 20% testing
+
+Model Training
+
+Logistic Regression or Random Forest is trained on features
+
+Prediction & Evaluation
+
+Predict is_viral on test data
+
+Evaluate using confusion matrix & classification report
+
+Visualize performance with a Seaborn heatmap
+
+
+               Predicted
+            |  Not Viral |  Viral
+True -------|------------|--------
+ Not Viral  |     55     |   12
+ Viral      |     9      |   64
+
+
+👨‍💻 Author
+Chittypolu Deepak
+
+
